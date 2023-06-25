@@ -1,0 +1,50 @@
+.container-contactList
+{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+    gap: 20px;
+}
+
+.container-contactItem{
+    display: flex;
+    width: 340px;
+    height: 268px;
+    padding: 0px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+
+    border-radius: 24px;
+    border: 10px solid #77B3D3;
+    background: #FFF;
+}
+.contact-img{
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+}
+
+.container-contactDetails{
+    height: 100%;
+    padding: 20px;
+}
+
+.contact{
+    display: flex;
+    border-radius: 24px;
+    border: 10px solid #77B3D3;
+    background: #FFF;
+    padding: 20px;
+    gap: 20px;
+}
+
+.img-details{
+    width: 367px;
+    height: 298px;
+    object-fit: cover;
+}
+
+.container-contactList a:visited{
+    color: black;
+}

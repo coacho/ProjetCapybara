@@ -1,0 +1,38 @@
+.topbar{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    float: right;
+    gap: 20px;
+}
+
+.topbar div
+{
+    padding: 10px;
+}
+
+.home, .setting{
+    border: solid 15px #C85D5D;
+    border-radius: 15px;
+    background-color: white;
+}
+
+.setting{
+    background-color: #C85D5D;
+}
+
+.btn-setting{
+    width: 100%;
+    border-radius: 10px;
+    background-color: #74C3B0;
+    color: #fff;
+    font-size: 25px;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: 'flex';
+    align-items: 'center';
+}
+
+.btn-setting a:visited{
+    color: white;
+}

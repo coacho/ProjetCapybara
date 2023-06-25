@@ -1,0 +1,33 @@
+.Home{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 8fr 0.5fr;
+    grid-template-areas: 
+    "SideBar TopBar TopBar"
+    "SideBar Center Center";
+    gap: 20px;
+    height: 90vh;
+}
+
+.SideBar{
+    grid-area: SideBar;
+}
+
+.TopBar{
+    grid-area: TopBar;
+}
+
+.Center{
+    grid-area: Center;
+    height: 100%;
+    /* padding-top: 80px; */
+    background-color: #515E73;
+    width: 100%;
+}
+
+/* .center-container{
+    height: 100%;
+    padding-top: 80px;
+    background-color: #515E73;
+    width: 100%;
+} */
