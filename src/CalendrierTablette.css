@@ -1,0 +1,346 @@
+.calendrier-tablette {
+  height: 735px;
+  width: 999px;
+}
+
+.calendrier-tablette .overlap {
+  height: 110px;
+  left: 27px;
+  position: absolute;
+  top: 138px;
+  width: 934px;
+}
+
+.calendrier-tablette .frame {
+  align-items: flex-start;
+  display: flex;
+  gap: 4px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: fit-content;
+}
+
+.calendrier-tablette .div {
+  align-items: flex-start;
+  display: flex;
+  gap: 4px;
+  position: relative;
+  width: fit-content;
+}
+
+.calendrier-tablette .group-2 {
+  height: 54px;
+  min-width: 132px;
+  position: relative;
+}
+
+.calendrier-tablette .calendrier-main {
+  border-radius: 12px;
+  height: 757px;
+  position: relative;
+}
+
+.calendrier-tablette .frame-calendrier-global {
+  align-items: center;
+  background-color: #515e73cc;
+  border-radius: 12px;
+  display: flex;
+  gap: 13px;
+  height: 757px;
+  justify-content: center;
+  left: 0;
+  overflow: hidden;
+  padding: 10px 0px;
+  position: absolute;
+  top: 0;
+  width: 999px;
+}
+
+.calendrier-tablette .frame-calendrier-barre_nav {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 508px;
+  justify-content: center;
+  padding: 5px 6px;
+  position: relative;
+  width: fit-content;
+}
+
+.calendrier-tablette .arrow-down {
+  height: 53px;
+  margin-left: -4px;
+  margin-right: -4px;
+  min-width: 52px;
+  object-fit: cover;
+  position: relative;
+}
+
+
+.calendrier-tablette .frame-heure {
+  align-items: center;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 49px;
+  height: 482px;
+  left: 0;
+  padding: 0px 11px;
+  position: absolute;
+  top: 62px;
+  width: 56px;
+}
+
+.calendrier-tablette .heure {
+  color: #000000;
+  font-family: "Quicksand", Helvetica;
+  font-size: 19px;
+  font-weight: 700;
+  height: 26.6px;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+  width: 34px;
+}
+
+.calendrier-tablette .frame-calendrier-main {
+  align-items: center;
+  display: flex;
+  gap: 3px;
+  justify-content: flex-end;
+  position: relative;
+  width: 883px;
+}
+
+.calendrier-tablette .frame-calendrier-main-global {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  justify-content: center;
+  margin-left: -6px;
+  position: relative;
+  width: 889px;
+}
+
+.calendrier-tablette .frame-calendrier-main-semaine {
+  align-items: center;
+  display: flex;
+  gap: 4px;
+  height: 42px;
+  justify-content: flex-end;
+  padding: 3px 0px;
+  position: relative;
+  width: 883px;
+}
+
+
+.calendrier-tablette .semaine-wrapper {
+  align-items: center;
+  align-self: stretch;
+  background-color: #ffffff;
+  border-radius: 12px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-left: -0.2px;
+  padding: 13px 11px;
+  position: relative;
+  width: 123.6px;
+}
+
+.calendrier-tablette .semaine-jour {
+  color: #000000;
+  font-family: "Quicksand", Helvetica;
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-bottom: -4.5px;
+  margin-top: -6.5px;
+  position: relative;
+  width: fit-content;
+}
+
+.frame-calendrier-main-jour{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+}
+
+.calendrier-tablette .ligne {
+  align-items: center;
+  display: flex;
+  gap: 3px;
+  height: 77px;
+  justify-content: flex-end;
+  position: relative;
+  width: 883px;
+}
+
+.calendrier-tablette .case {
+  align-self: stretch;
+  background-color: #ffffff;
+  border-radius: 7px;
+  height: 77px;
+  margin-left: -0.2px;
+  min-width: 123.6px;
+  position: relative;
+}
+
+.calendrier-tablette .calendar-over {
+  background-color: #c85d5d33;
+  border: 0.5px solid;
+  border-color: #dcdcdc;
+  height: 399px;
+  left: 851px;
+  position: absolute;
+  top: 282px;
+  width: 126px;
+}
+
+.calendrier-tablette .frame-113 {
+  height: 48px;
+  position: relative;
+  top: 151px;
+  width: 48px;  
+}
+
+.calendrier-tablette .frame-114 {
+  height: 175px;
+  left: 2px;
+  position: relative;
+  top: -54px;
+  width: 123px;
+}
+
+.calendrier-tablette .overlap-group-2 {
+  height: 245px;
+  left: -2px;
+  position: relative;   
+  top: -25px;
+  width: 124px;
+}
+
+.calendrier-tablette .anniversaire-de-wrapper {
+  background-color: #c85d5d;
+  border-radius: 7px;
+  height: 78px;
+  left: 0;
+  position: absolute;
+  top: 167px;
+  width: 124px;
+}
+
+.calendrier-tablette .anniversaire-de {
+  color: #ffffff;
+  font-family: "Quicksand", Helvetica;
+  font-size: 20px;
+  font-weight: 600;
+  height: 50px;
+  left: -1px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 14px;
+  width: 125px;
+}
+
+.calendrier-tablette .rectangle {
+  height: 168px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 124px;
+}
+
+.calendrier-tablette .calendar-week-table-2 {
+  align-items: center;
+  background-color: #77b3d333;
+  border: 0.5px solid;
+  border-color: #dcdcdc;
+  display: flex;
+  flex-direction: column;
+  height: 157px;
+  left: 218px;
+  position: absolute;
+  top: 444px;
+  width: 125px;
+}
+
+.calendrier-tablette .rectangle-wrapper {
+  align-items: flex-start;
+  align-self: stretch;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  position: relative;
+}
+
+.calendrier-tablette .rectangle-2 {
+  align-self: stretch;
+  height: 100px;
+  min-width: 95px;
+  position: relative;
+}
+
+.calendrier-tablette .rendez-vous-dr-colin-wrapper {
+  align-items: center;
+  align-self: stretch;
+  background-color: #77b3d3;
+  display: flex;
+  height: 55px;
+  justify-content: center;
+  padding: 2px 4px;
+  position: relative;
+}
+
+.calendrier-tablette .rendez-vous-dr-colin {
+  color: #ffffff;
+  flex: 1;
+  font-family: "Quicksand", Helvetica;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+  text-align: center;
+}
+
+.calendrier-tablette .element-mois-en-cours {
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 12px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  left: 91px;
+  padding: 5px 19px;
+  position: absolute;
+  top: 17px;
+  width: 250px;
+}
+
+.calendrier-tablette .element-mois-en-cours-texte {
+  color: #000000;
+  font-family: "Quicksand", Helvetica;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-left: -12px;
+  margin-right: -12px;
+  margin-top: -1px;
+  position: relative;
+  text-align: center;
+  width: 236px;
+}
+
+.calendrier-tablette.mois {
+  background-color: #515e73cc;
+  position: relative;
+}
