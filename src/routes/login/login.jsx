@@ -10,16 +10,6 @@ import { useSelector, useDispatch } from "react-redux";
 import { get, login, logout } from "../../slices/userAuth/userAuthSlice";
 
 import loginController from "../../controller/login/loginController";
-// const authModule = require('../../controller/login/login');
-
-
-//// import {createBrowserHistory} from "history";
-//// const history = createBrowserHistory();
-
-// export async function action() {
-//     const contact = await createContact();
-//     return { contact };
-// }
 
 export default function Login() {
 

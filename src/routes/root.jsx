@@ -70,7 +70,6 @@ export default function Root() {
                                 <Link to="register">Créer un compte</Link>
                                 <Link to="login">Se connecter</Link>
                             </nav>
-                            {/* <Link to="/"><h1>Retour à l'accueil</h1></Link> */}
                         </div>
                         </>
                     ) : (

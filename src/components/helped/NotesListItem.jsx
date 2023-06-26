@@ -5,9 +5,6 @@ const NotesListItem = (props) => {
     const {note} = props; 
     console.log(note);
 
-    console.log("From NotesListItem");
-
-    // console.log(note);
     //composant qui renvoie une note à son parent noteList
     return ( 
         <div className="container-noteItem">
@@ -24,11 +21,6 @@ const NotesListItem = (props) => {
                         {note.author.link && <span><i>&nbsp;votre {note.author.link}</i></span>}
                         
                     </p>
-                    {/* {note.profession && <p>Votre {note.profession.toLowerCase()}</p>} */}
-                    {/* {note.link && <p>Votre {note.link.toLowerCase()}</p>} */}
-                    {/* {note.link && <h6>{note.link.toLowerCase()}</h6>} */}
-                    {/* <h6>{note.profession.toLowerCase()}</h6> */}
-                    {/* <h6>10 septembre</h6> */}
                 </div>
                 <div className='note-title'>
                     <h3>{note.title}</h3>

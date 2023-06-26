@@ -4,7 +4,6 @@ const ContactsListItem = (props) => {
     //compsant qui renvoie la vue d'un proche
 
     const {contact} = props;
-    // <Contact imgPath="/" />
     console.log(contact);
  
     return ( 

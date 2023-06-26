@@ -10,7 +10,6 @@ import TopBar from '../../../components/helped/TopBar';
 import ContactDetails from "../../../components/helped/ContactDetails";
 
 import { useSelector, useDispatch } from "react-redux";
-//import ContactItem from "../../../components/helped/ContactItem";
 
 
 export default function HelpedContacts() {

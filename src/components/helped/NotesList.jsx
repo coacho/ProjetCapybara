@@ -39,14 +39,11 @@ const NotesList = (props) => {
             },
             content: "Je passe te chercher en voiture, dimanche à 10h, pour l'anniversaire de Jeanne"
         },
-        
-        // { key: '2', name: 'Note 2', author: 'Pierre Dupont', link: "Votre fils", img: 'image2.jpg' },
     ];
 
 
     useEffect(() => {
         setNotes(allNotes);
-        // console.log(notes);
     }, []);
 
 

@@ -30,9 +30,6 @@ export default function HelpedCalendar() {
                     <div id="default-calendar-view">
                         <Outlet />
                     </div>
-                    {/* <CalendarWeek />
-                    <CalendarAgenda /> */}
-                    {/* <p><em>(composant Calendrier par défaut ici)</em></p> */}
                 </div>
             </div>
         </>

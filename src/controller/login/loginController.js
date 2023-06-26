@@ -19,7 +19,7 @@ const authenticateUser = async function (formData) {
             console.log("nom-prénom de l'utilisateur connecté : ",
                 user.properties.firstName + ' ' + user.properties.lastName
             );
-            // let userLabel = user.labels.filter(label => label !== 'Person')[0];
+            
             let userLabels = user.labels;
             console.log(
                 "label de l'utilisateur connecté : ",

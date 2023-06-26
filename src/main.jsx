@@ -41,20 +41,9 @@ import HelpedNote from './routes/HelpedPerson/notes/HelpedNote';
 import HelpingContacts from './routes/HelpingPerson/contacts/HelpingContacts';
 import HelpingCalendar from './routes/HelpingPerson/calendar/HelpingCalendar';
 
-//// import Contact, {
-////   loader as contactLoader,
-//// } from './routes/contact';
-
-//// import EditContact, {
-////   action as editAction,
-//// } from './routes/edit';
-
 
 import ErrorPage from './error-page';
 
-//// import { TestDatabase } from './components/TestDatabase';
-//// import config from "../config";
-//// console.log(config.SERVER_IP);
 
 const router = createBrowserRouter([
   {

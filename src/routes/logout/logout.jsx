@@ -9,8 +9,6 @@ import {
 import { useSelector, useDispatch } from "react-redux";
 import { get, login, logout } from "../../slices/userAuth/userAuthSlice";
 
-// import loginController from "../../controller/login/loginController";
-
 
 export default function Logout() {
 
