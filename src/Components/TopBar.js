@@ -6,7 +6,7 @@ const TopBar = (props) => {
     const { title, btn }  = props;
     return (
         <div className="topbar">
-            <div className="home">
+            <div className="home-text">
                 <h1>{title}</h1>
             </div>
             <div className="setting">

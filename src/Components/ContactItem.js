@@ -5,7 +5,7 @@ const ContactItem = (props) => {
 
     const {contact} = props;
     // <Contact imgPath="/" />
- 
+      
     return ( 
         <div className="container-contactItem">
             <div className="contact-name">

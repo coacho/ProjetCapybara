@@ -8,17 +8,19 @@ const HelpedNotes = () => {
     const title = "Note";
     const btn = "Accueil"
     return ( 
-        <div className='Home'>
-            <div className='TopBar'>
-                <TopBar title={title} btn={btn}/>
-            </div>
-            <div className='SideBar'>
+        <div className='home'>
+            <div id="sidebar">
                 <SideBar/>
             </div>
-            <div className='Center'>
-                <NoteList />
+            <div id="container-home">
+                <div className='container-topbar'>
+                    <TopBar title={title} btn={btn}/>
+                </div>
+                <div className='center'>
+                    <NoteList />
+                </div>
             </div>
-        </div> 
+        </div>
     );
 }
  

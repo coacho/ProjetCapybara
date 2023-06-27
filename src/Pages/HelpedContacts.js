@@ -8,15 +8,17 @@ const HelpedContacts = () => {
     const title = "Mes proches";
     const btn = "Accueil"
     return ( 
-        <div className='Home'>
-            <div className='TopBar'>
-                <TopBar title={title} btn={btn}/>
-            </div>
-            <div className='SideBar'>
+        <div className='home'>
+            <div id="sidebar">
                 <SideBar/>
             </div>
-            <div className='Center'>
-                <ContactList/>
+            <div id="container-home">
+                <div>
+                    <TopBar title={title} btn={btn}/>
+                </div>
+                <div className='center'>
+                    <ContactList/>
+                </div>
             </div>
         </div>
     );

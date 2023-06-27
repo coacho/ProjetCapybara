@@ -1,35 +1,41 @@
 
-/* .container-bar {
-    padding: 25px;
-} */
-.navbar-left {
-    /* width: 25%;     */
-    height: 100%; /* 100% de la hauteur de la fenêtre */
-    background-color: #f0f0f0;
-    /* padding: 20px; */
-    border: solid 15px #C85D5D;
+.container-bar {
+    height: 100vh; /* 100% de la hauteur de la fenêtre */
     overflow: hidden; /* Pour cacher le contenu qui dépasse */
-    float: left;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-bar h1{
+    font-size: 1.5rem;
+}
+
+.navbar-left {
+     overflow: hidden; /* Pour cacher le contenu qui dépasse */
+     border: solid 0.5rem #C85D5D;
+     margin: 1.0rem;
+     height: 100%;
 }
   
   
-  
+
 .column {
 width: 100%;
-padding: 10px;
 background-color: #fff;
+padding: 0rem 1rem;
 }
+
 
 .row-middle, .row{
 display: flex;
-border-bottom: solid 15px #C85D5D;
-}
+border-bottom: solid 0.5rem #C85D5D;
+} 
+
 
 
 
 .day{
-    border-right: solid 15px #C85D5D;
+    border-right: solid 0.5rem #C85D5D;
     width: 100%;
 }
 
@@ -37,12 +43,16 @@ h1{
     text-align: center;
 }
 
-.img-eat{
-    margin-top: 20px;
+.img-eat img{
+    margin: 20px;
+    width: 18rem;
+    height: 19rem;
+
 }
 
 .timeToEat {
     background-color: #C85D5D;
+    height: inherit;
 }
 .btn-help{
     padding: 20px;
@@ -54,4 +64,5 @@ h1{
     border: none;
     margin: 5px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    height: fit-content;
 }

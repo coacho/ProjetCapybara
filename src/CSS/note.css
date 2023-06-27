@@ -4,10 +4,10 @@
     background-color: white;
     border: solid 12px #77B3D3;
     border-radius: 12px;
-    margin: 20px;
+    margin: 1rem;
     gap: 20px;
     align-items: flex-start;
-
+    width: 52rem;
 }
 
 .note{
@@ -97,4 +97,9 @@ a{
 
 .container-noteList a:visited{
     color: black;
+}
+
+.container-noteList{
+    background-color: #596F86;
+    padding: 0.2rem;
 }

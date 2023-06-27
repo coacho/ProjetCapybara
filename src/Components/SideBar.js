@@ -7,6 +7,9 @@ export default function SideBar()
 {
     const [currentTime, setCurrentTime] = useState(''); // Déclaration de la variable d'état pour l'heure actuelle
     const [currentDate, setCurrentDate] = useState(''); // Déclaration de la variable d'état pour le jour actuel
+    const [dayOrNight, setDayOrNight] = useState('');
+    const [message, setMessage] = useState('');
+
 
     useEffect(() => {
         const updateDateTime = () => {
@@ -24,8 +27,20 @@ export default function SideBar()
           // Mise à jour des variables 
           setCurrentTime(time);
           setCurrentDate(day);
+
+          if (hours >= 6 && hours < 18) {
+            setDayOrNight('Jour');
+          } else {
+            setDayOrNight('Nuit');
+          }
+
+          if(hours == 1)
+        {
+            setMessage("Bientôt l'heure de manger");
+        }
         };
     
+        
         updateDateTime(); // Appel initial pour mettre à jour l'heure et le jour immédiatement
     
         const intervalId = setInterval(updateDateTime, 1000); // Mettre à jour l'heure et le jour toutes les secondes
@@ -48,12 +63,12 @@ export default function SideBar()
                         <h1>{currentDate}</h1>
                     </div>
                     <div className="column day-night">
-                        <h1>Jour</h1>
+                        <h1>{dayOrNight}</h1>
                     </div>
                 </div>
                 <div className="row">
                     <div className="column">
-                        <h1>Il est bientôt l'heure de déjeûner</h1>
+                        <h1>{message}</h1>
                         <h3>12h - déjeûner</h3>
                         <img className='img-eat' src={eatImage} alt="" />
                     </div>
