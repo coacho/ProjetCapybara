@@ -20,6 +20,7 @@ const NoteDetails = (props) => {
     // Utilisez l'ID pour récupérer la note correspondante
     const note = allNotes.find(note => note.id === id);
     return ( 
+        <>
         <div className="container-noteDetails">
             <img src={img} alt="" /> 
             <div className='note'>
@@ -34,13 +35,16 @@ const NoteDetails = (props) => {
                 <div className='note-description'>
                     <h3>{note.description}</h3>
                 </div>
-                <NavLink to='/note'>
+            </div>
+        </div> 
+        <div>
+            <NavLink to='/note'>
                     <div className='btn-back'>
                         <button>Retour</button> 
                     </div>
-                </NavLink>
-            </div>
-        </div> 
+            </NavLink>
+        </div>
+        </>
      );
 }
  

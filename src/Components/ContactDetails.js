@@ -30,11 +30,11 @@ const ContactDetails = () => {
                 </div>
                 
             </div>
-        <NavLink to='/contact'>
-            <div className='btn-back'>
-                <button>Retour</button> 
-            </div>
-        </NavLink>
+            <NavLink to='/contact'>
+                <div className='btn-back'>
+                    <button>Retour</button> 
+                </div>
+            </NavLink>
     </div> 
      );
 }

@@ -52,7 +52,7 @@ const ContactList = () => {
             }
             </div>
 
-            <div className="scrolle">
+            {/* <div className="scrolle">
                 <img src={btnLeft} 
                     alt=""
                     onClick={() => setCurrentPage(currentPage - 1)}
@@ -80,7 +80,35 @@ const ContactList = () => {
                     onClick={() => setCurrentPage(currentPage + 1)}
                     disabled={currentPage === totalPages - 1}
                 />
-            </div>
+            </div> */}
+
+        <div className="scrolle">
+        <button
+            onClick={() => setCurrentPage(currentPage - 1)}
+            disabled={currentPage === 0}
+        >
+            <img src={btnLeft} alt=""/>
+        </button>
+
+        {
+            Array.from({ length: totalPages }, (_, index) => (
+                <img
+                src={btn}
+                alt=""
+                key={index}
+                onClick={() => setCurrentPage(index)}
+                className={currentPage === index ? "active" : ""}
+              />
+            ))
+        }
+
+        <button
+            onClick={() => setCurrentPage(currentPage + 1)}
+            disabled={currentPage === totalPages - 1}
+        >
+            <img src={btnRight} alt=""/>
+        </button>
+        </div>
         </div>
 
      );

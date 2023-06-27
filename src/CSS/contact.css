@@ -64,8 +64,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px;
-    border-top: #77B3D3 solid 20px;
+    padding: 0.5rem;
+    border-top: #77B3D3 solid 1rem;
     background-color: #596F86;
 }
 
@@ -84,3 +84,8 @@
   .hidden {
     display: none;
   }
+
+.scrolle button{
+    background-color: transparent;
+    border: none;
+}
