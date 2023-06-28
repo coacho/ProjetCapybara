@@ -3,6 +3,7 @@ import {
     Form,
     useLoaderData,
     redirect,
+    useNavigate,
     //// useHistory,
 } from "react-router-dom";
 
@@ -13,36 +14,26 @@ import { get, login, logout } from "../../slices/userAuth/userAuthSlice";
 export default function Logout() {
 
     // Store
-    const authUser = useSelector((state) => state.userAuth);
+    const userAuth = useSelector((state) => state.userAuth);
     const dispatch = useDispatch();
+    const navigate = useNavigate();
 
-    // useEffect(() => {
-    //     console.log("userAuth store: ", authUser);
-    // }, [authUser])
+    useEffect( () => {
 
-    const logout = () => {
-        console.log('--- DECONNEXION ---');
+        async function logoutUser() {
 
-        try {
-            // const user = await loginController.authenticateUser(formData);
-            
-            console.log("Déconnexion:", user);
-            
-            //~
-            //~ await dispatch(logout());
-
-
+            await dispatch(logout());
+            navigate('/');
         }
-        catch(err) {
-            console.log(err);
-        }
-    }
+        logoutUser();
+
+    }, [])
 
     return (
         <>
             <h2>Déconnexion</h2>
             {
-                authUser.authenticated ? (
+                userAuth.authenticated ? (
                     
                     <p>Déconnexion...</p>
 
@@ -54,7 +45,6 @@ export default function Logout() {
             
             }
             
-            {/* </Form> */}
         </>
     )
 }

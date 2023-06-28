@@ -11,27 +11,23 @@ import { useSelector, useDispatch } from "react-redux";
 
 
 
-export default function HelpingCalendar() {
+export default function HelpingReminders() {
 
     
 
     return (
         <>
-            <h2>Calendrier</h2>
+            <h2>Rappels</h2>
             <nav>
                 <ul>
                     <li>
-                        <Link to="/helping/calendar/list">
-                            <button>Lister les événements du calendrier</button>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/helping/calendar/add">
-                            <button>Ajouter un événement au calendrier</button>
+                        <Link to="/helping/reminders/param">
+                            <button>Paramétrer les rappels</button>
                         </Link>
                     </li>
                 </ul>
             </nav>
+            
         </>
     )
 }

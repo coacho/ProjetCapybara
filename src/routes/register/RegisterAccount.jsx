@@ -7,13 +7,13 @@ import {
 } from "react-router-dom";
 
 import { useSelector, useDispatch } from "react-redux";
-import { get, login, logout } from "../../slices/userAuth/userAuthSlice";
+// import { get, login, logout } from "../../slices/userAuth/userAuthSlice";
 
-import loginController from "../../controller/login/loginController";
+import registerController from "../../controller/register/registerController";
 
 
 
-export default function Login() {
+export default function RegisterAccount() {
 
     // Store
     const userAuth = useSelector((state) => state.userAuth);
@@ -39,6 +39,7 @@ export default function Login() {
     // Variables locales du composant
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [birthDate, setBirthDate] = useState('');
 
     const handleEmailChange = (event) => {
         setEmail(event.target.value);
@@ -52,8 +53,8 @@ export default function Login() {
         event.preventDefault();
 
 
-        console.log('--- CONNEXION ---');
-        console.log(email, password);
+        console.log("--- CREATION D'UN COMPTE ---");
+        console.log(email, password, birthDate);
 
         const formData = {
             email,
@@ -61,13 +62,13 @@ export default function Login() {
         };
 
         try {
-            const user = await loginController.authenticateUser(formData);
+            const user = await loginController.registerController(formData);
             
             
             await dispatch(login({
                 userId: user.userId,
                 userLabels: user.userLabels,
-            })); // L'état de l'authentification est contrôlé par le composant HelpingRoot
+            }));
             
             setEmail('');
             setPassword('');
@@ -87,6 +88,7 @@ export default function Login() {
                 !userAuth.authenticated ? (
                     
                     <form onSubmit={handleSubmit}>
+                        {/* <Form method="post" id="contact-form"> */}
                         <div>
                             <label htmlFor="email">
                                 Votre identifiant <span className="sublabel">(email)</span>

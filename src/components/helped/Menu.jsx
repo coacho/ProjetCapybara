@@ -6,6 +6,7 @@ import albumImg from '../../assets/img/album.png';
 import messagerieImg from '../../assets/img/message.png';
 import horlogeImg from '../../assets/img/horloge.png';
 import noteImg from '../../assets/img/note.png';
+import '../../assets/css/menu.css';
 
 //composant des différents pages 
 const Menu = () => {

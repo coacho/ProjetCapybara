@@ -55,7 +55,7 @@ button:active {
   box-shadow: 0 0px 1px hsla(0, 0%, 0%, 0.4);
   transform: translateY(1px);
 }
-/* 
+
 #contact h1 {
   display: flex;
   align-items: flex-start;
@@ -78,7 +78,7 @@ button:active {
 #contact h1 form button[value="true"]:hover,
 #contact h1 form button[value="false"] {
   color: #eeb004;
-} */
+}
 
 form[action$="destroy"] button {
   color: #f44250;
@@ -97,7 +97,6 @@ form[action$="destroy"] button {
 }
 
 #root {
-  display: flex;
   height: 100%;
   width: 100%;
 }
@@ -108,6 +107,12 @@ form[action$="destroy"] button {
   border-right: solid 1px #e3e3e3;
   display: flex;
   flex-direction: column;
+}
+
+.container-login{
+  display: flex;
+  height: 100%;
+  width: 100%;
 }
 
 #sidebar > * {

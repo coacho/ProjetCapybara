@@ -17,7 +17,7 @@ export default ({mode}) => {
       },
       plugins: [
         react(),
-        reactRefresh()
+        reactRefresh() 
       ]
   });
 }

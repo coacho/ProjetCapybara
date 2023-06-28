@@ -20,11 +20,11 @@ export default function HelpedContacts() {
     const title = "Mes proches";
     const btn = "Retour à l'accueil"
     return ( 
-        <div className='Home'>
-            <div className='TopBar'>
+        <div id='container-home'>
+            <div className='container-topbar'>
                 <TopBar title={title} btn={btn}/>
             </div>
-            <div className='Center'>
+            <div className='center'>
                 <ContactsList/>
             </div>
         </div>

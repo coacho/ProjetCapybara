@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 //Composant pour afficher le contact en details
 const ContactDetails = () => {
-    return ( 
+    return (
         <div className="container-contactDetails">
             <div className='contact'>
                 <div className='contact-img'>
@@ -13,15 +13,15 @@ const ContactDetails = () => {
                     <h1>Name</h1>
                     <h5>Relation</h5>
                 </div>
-                
+
             </div>
-        <Link to='/helped/contacts'>
-            <div className='btn-back'>
-                <button>Retour aux contacts</button> 
-            </div>
-        </Link>
-    </div> 
-     );
+            <Link to='/helped/contacts'>
+                <div className='btn-back'>
+                    <button>Retour aux contacts</button>
+                </div>
+            </Link>
+        </div>
+    );
 }
- 
+
 export default ContactDetails;

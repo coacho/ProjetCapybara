@@ -3,28 +3,23 @@ import {
     Link,
     useLoaderData,
     Form,
+    useNavigate,
 } from "react-router-dom";
-import { getContacts, createContact } from "../contacts";
+// import { getContacts, createContact } from "../contacts";
 
-//// import neo4j, { session } from "neo4j-driver";
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { get, login, logout } from "../slices/userAuth/userAuthSlice";
 
+// export async function loader() {
+//     const contacts = await getContacts();
+//     return { contacts };
+// }
 
-//// require('dotenv').config()
-//// import { TestDatabase } from "../components/TestDatabase";
-
-
-export async function loader() {
-    const contacts = await getContacts();
-    return { contacts };
-}
-
-export async function action() {
-    const contact = await createContact();
-    return { contact };
-}
+// export async function action() {
+//     const contact = await createContact();
+//     return { contact };
+// }
 
 export async function testExpressAPI() {
 
@@ -52,48 +47,52 @@ export default function Root() {
     // const { contacts } = useLoaderData();
 
     const userAuth = useSelector((state) => state.userAuth);
+    const navigate = useNavigate();
     
 
     useEffect(() => {
         testExpressAPI();
     }, []);
 
+    //! DEBUT : Commenter pour ne pas avoir à se connecter lors des tests
+    // useEffect(() => {
+        
+    //     if (userAuth.authenticated) 
+    //     {
+    //         console.log(`${userAuth.userId} est connecté`);
+    //         if (userAuth.userLabels.includes('HelpedPerson'))
+    //         {
+    //             navigate('/helped/home');
+    //         }
+    //         else {
+    //             navigate('/helping/home');
+    //         }
+    //     } 
+    //     else {
+    //         console.log(`Aucun utilisateur n'est connecté`);
+    //         navigate('/login');
+    //     }
+
+    // }, [userAuth.authenticated])
+    //! FIN : Commenter pour ne pas avoir à se connecter lors des tests
+
+
+
     return (
         <>
-            {/* <div> */}
-                {
-                    !userAuth.authenticated ? (
-                        <>
-                        <div id="sidebar">
-                            <h1>Capybara</h1>
-                            <nav>
-                                <Link to="register">Créer un compte</Link>
-                                <Link to="login">Se connecter</Link>
-                            </nav>
-                        </div>
-                        </>
-                    ) : (
-
-                        userAuth.userLabels.includes('HelpedPerson') ? (
-                            <>
-                            <Link to="/helped/home"><h1>Retour à l'accueil</h1></Link>
-                            <Link to="/helped/calendar">Calendrier</Link>
-                            <Link to="/helped/contacts">Mes proches</Link>
-                            {/* <Link to="/logout">Se déconnecter</Link> */}
-                            </>
-                        ) : (
-                            <>
-                            <Link to="/helping/home"><h1>Accueil</h1></Link>
-                            <Link to="/helping/calendar">Calendrier</Link>
-                            <Link to="/helping/contacts">Répertoire</Link>
-                            <Link to="/logout">Se déconnecter</Link>
-                            </>
-
-                        )
-                            
-                    )
-                }
-            
+            <div id="sidebar">
+            {
+                !userAuth.authenticated 
+                &&  <>
+                        <h1>Capybara</h1>
+                        <nav>
+                            <Link to="register">Créer un compte</Link>
+                            <Link to="login">Se connecter</Link>
+                        </nav>
+                    </>
+            }
+            </div>
+                
             <div id="detail">
                 <Outlet />
             </div>

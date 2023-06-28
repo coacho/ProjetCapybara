@@ -13,18 +13,21 @@ const authenticateUser = async function (formData) {
         const user = await response.json();
 
         if (response.ok) {
-            console.log("Connexion réussie ???", response);
-            console.log("Utilisateur connecté : ", user);
-            console.log("properties", user.properties);
-            console.log("nom-prénom de l'utilisateur connecté : ",
-                user.properties.firstName + ' ' + user.properties.lastName
-            );
+            // console.log("Connexion réussie ???", response);
+            // console.log("Utilisateur connecté : ", user);
+            // console.log("properties", user.properties);
+            // console.log("nom-prénom de l'utilisateur connecté : ",
+            //     user.properties.firstName + ' ' + user.properties.lastName
+            // );
             
-            let userLabels = user.labels;
-            console.log(
-                "label de l'utilisateur connecté : ",
-                userLabels
-            );
+            // let userLabels = user.labels;
+            // console.log(
+            //     "label de l'utilisateur connecté : ",
+            //     userLabels
+            // );
+            // console.log("nom-prénom de l'utilisateur connecté : ",
+            //     user.properties.firstName + ' ' + user.properties.lastName
+            // );
             return {
                 userId: user.properties.userId,
                 userLabels : user.labels,

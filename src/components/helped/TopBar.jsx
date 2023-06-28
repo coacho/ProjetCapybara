@@ -2,13 +2,15 @@ import settingImage from '../../assets/img/gear-100.png'
 import homeImage from '../../assets/img/home.png';
 import { Link } from 'react-router-dom';
 
+import '../../assets/css/topbar.css';
+
 const TopBar = (props) => {
     
     const { title, btn }  = props;
 
     return (
         <div className="topbar">
-            <div className="home">
+            <div className="home-text">
                 <h1>{title}</h1>
             </div>
             <div className="setting">
@@ -21,7 +23,9 @@ const TopBar = (props) => {
                         </>
                     ) : (
                         <>
-                        {btn}<img  alt="" src={settingImage}/>
+                        <Link to="/helped/settings">
+                            {btn}<img  alt="" src={settingImage}/>
+                        </Link>
                         </>
                     )
                     }

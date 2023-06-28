@@ -19,11 +19,11 @@ export default function HelpedNote() {
     const title = "Mes notes";
     const btn = "Retour à l'accueil"
     return ( 
-        <div className='Home'>
-            <div className='TopBar'>
+        <div id='container-home'>
+            <div className='container-topbar'>
                 <TopBar title={title} btn={btn}/>
             </div>
-            <div className='Center'>
+            <div className='center'>
                 <NoteDetails />
             </div>
         </div>

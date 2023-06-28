@@ -11,17 +11,7 @@ export default function HelpingHome ()
     const btn = "Paramère"
 
     return (
-        <div className='Home'>
-            <h2>Accueil</h2>
-            {/* <div className='TopBar'>
-                <TopBar title={title} btn={btn}/>
-            </div>
-            <div className='SideBar'>
-                <SideBar/>
-            </div>
-            <div className='Center'>
-                <Menu/>
-            </div> */}
-        </div>
+        // <div className='Home'>
+        <>HelpingHome</>
     );
 }
