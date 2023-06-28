@@ -1,0 +1,14 @@
+.container-reminders{
+    padding: 1rem;
+}
+
+
+.form-group input, button{
+    width: 100%;
+}
+
+
+.form-group {
+    margin-bottom: 2rem;
+}
+

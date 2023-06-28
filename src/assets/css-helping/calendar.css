@@ -1,0 +1,10 @@
+ul li {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.btn-view-event{
+    background-color: #2196F3;
+    color: white;
+}
+

@@ -1,0 +1,29 @@
+.btn-group{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+ul{
+    padding: 1rem;
+}
+
+li{
+    text-align: center;
+}
+
+.contact-item{
+    display: flex;
+    padding: 1rem;
+    border-bottom: 1px solid #EBEBEB;
+    gap: 1rem;
+}
+
+.contact-item img {
+    width: 4rem;
+    height: 4rem;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
