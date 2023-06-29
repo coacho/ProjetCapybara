@@ -15,7 +15,7 @@ const NotesList = (props) => {
 
     const allNotes = [
         {
-            key: '1',
+            key: '3',
             title: 'Note 1',
             author: {
                 firstName: 'Gilbert',
@@ -25,12 +25,12 @@ const NotesList = (props) => {
                     fra: ['Personne', 'Médecin'],
                 },
                 profession: 'kinésithérapeute',
-                avatar: '../../assets/img/petit-fils.png',
+                // avatar: '../../assets/img/petit-fils.png',
             },
             content: "N'oubliez pas de prendre votre traitement Mme Dupont"
         },
         {
-            key: '2',
+            key: '4',
             title: 'Note 2',
             author: {
                 firstName: 'Pierre',
@@ -39,10 +39,38 @@ const NotesList = (props) => {
                     eng: ['Person', 'HelpingPerson', 'InstanceManager'],
                     fra: ['Personne', 'Personne aidante', "Manager de l'instance"]
                 },
-                avatar: '../../assets/img/petit-fils.png',
+                // avatar: '../../assets/img/petit-fils.png',
                 link: 'fils',
             },
             content: "Je passe te chercher en voiture, dimanche à 10h, pour l'anniversaire de Jeanne"
+        },
+        {
+            key: '8',
+            title: 'Note 3',
+            author: {
+                firstName: 'Jeanne',
+                lastName: 'Dupont',
+                labels: {
+                    eng: ['Person', 'HelpingPerson'],
+                    fra: ['Personne', 'Personne aidante',]
+                },
+                link: 'petite-fille',
+            },
+            content: "C'est mon anniversaire dimanche, j'ai hâte de te voir Mamie !"
+        },
+        {
+            key: '4',
+            title: 'Note 4',
+            author: {
+                firstName: 'Pierre',
+                lastName: 'Dupont',
+                labels: {
+                    eng: ['Person', 'HelpingPerson', 'InstanceManager'],
+                    fra: ['Personne', 'Personne aidante']
+                },
+                link: 'fils',
+            },
+            content: "Ton portefeuille est dans ton manteau rouge"
         },
     ];
 
@@ -76,8 +104,10 @@ const NotesList = (props) => {
                 <button
                     onClick={() => setCurrentPage(currentPage - 1)}
                     disabled={currentPage === 0}
-                >
-                    <img src={btnLeft} alt="" />
+                >   
+                    {currentPage > 0 
+                    && <img src={btnLeft} alt="" />
+                    }
                 </button>
 
                 {
@@ -96,7 +126,9 @@ const NotesList = (props) => {
                     onClick={() => setCurrentPage(currentPage + 1)}
                     disabled={currentPage === totalPages - 1}
                 >
-                    <img src={btnRight} alt="" />
+                    {currentPage !== totalPages -1
+                    && <img src={btnRight} alt="" />
+                    }
                 </button>
             </div>
         </>

@@ -9,8 +9,6 @@ import {
 
 import { useSelector, useDispatch } from "react-redux";
 
-
-
 export default function HelpingContactsAddContact() {
 
     const [firstName, setFirstName] = useState('');

@@ -44,13 +44,18 @@ export default function HelpingRoot() {
         //! FIN : Commenter pour ne pas avoir à se connecter lors des tests
             <div className="container-home-helping">
                 <div id="sidebar">
-                    <h1>Capybara</h1>
+                    {/* <h1>Capybara</h1> */}
                     <nav>
-                        <Link to="/helping/home"><h1>Accueil</h1></Link>
-                        <Link to="/helping/calendar">Calendrier</Link>
-                        <Link to="/helping/contacts">Répertoire</Link>
-                        <Link to="/helping/reminders">Rappels</Link>
                         <Link to="/logout">Se déconnecter</Link>
+
+                        <Link to="/helping/home"><h1>Accueil</h1></Link>
+                        {userAuth.instance &&
+                            <>
+                                <Link to="/helping/calendar">Calendrier</Link>
+                                <Link to="/helping/contacts">Répertoire</Link>
+                                <Link to="/helping/reminders">Rappels</Link>
+                            </>
+                        }
                     </nav>
                 </div>
                 <div id="outlet">

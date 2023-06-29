@@ -3,12 +3,14 @@ import img from '../../assets/img/doctor.png';
 const NotesListItem = (props) => {
     
     const {note} = props; 
+    const IMG_SOURCE = import.meta.env.VITE_APP_IMAGES_SERVER_URI + '/getUserAvatar';
+    
     console.log(note);
 
     //composant qui renvoie une note à son parent noteList
     return ( 
         <div className="container-noteItem">
-            <img src={img} alt="" /> 
+            <img src={IMG_SOURCE + '/' + note.key} alt="" /> 
             <div className='note'>
                 <div className='note-info'>
                     <p>

@@ -12,6 +12,8 @@
 }
 .container-noteItem img {
     align-self:center;
+    width: 160px;
+    border-radius: 10px;
 }
 .note{
     display: flex;

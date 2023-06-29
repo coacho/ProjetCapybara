@@ -70,8 +70,8 @@ export default function Root() {
                 &&  <>
                         <h1>Capybara</h1>
                         <nav>
-                            <Link to="register">Créer un compte</Link>
-                            <Link to="login">Se connecter</Link>
+                            <Link to="/register">Créer un compte</Link>
+                            <Link to="/login">Se connecter</Link>
                         </nav>
                     </>
             }

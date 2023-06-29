@@ -57,7 +57,7 @@ async function addContact(formData, instanceID) {
         if (response.ok) {
 
             console.log('saved new contact', contact);
-            await saveAvatar(contact.nodeId, contact.avatarFile);
+            await saveUserAvatar(contact.nodeId, contact.avatarFile);
 
             return contact;
         }
@@ -67,28 +67,4 @@ async function addContact(formData, instanceID) {
     }
 }
 
-async function saveAvatar(userNodeId, userAvatarFile) {
-
-    try {
-        const response = await fetch(API_SERVER_URI + '/saveAvatar', {
-            method: "POST",
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ userNodeId, userAvatarFile }),
-        });
-        const avatar = await response.json();
-
-        if (response.ok) {
-
-            console.log("saved new contact's avatar", avatar);
-            return avatar;
-        }
-
-    }
-    catch (err) {
-        console.error("Erreur lors de la requête", err);
-    }
-}
-
-export default { getContact, updateContact, addContact, saveAvatar };
+export default { getContact, updateContact, addContact };

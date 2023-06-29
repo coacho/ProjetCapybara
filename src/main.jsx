@@ -18,6 +18,7 @@ import Root from './routes/root';
 
 import Login from './routes/login/login';
 import Logout from './routes/logout/logout';
+import RegisterAccount from './routes/register/RegisterAccount';
 
 
 // Aidé
@@ -70,6 +71,10 @@ const router = createBrowserRouter([
       {
         path: "/logout",
         element: <Logout />
+      },
+      {
+        path: "/register",
+        element: <RegisterAccount />
       },
     ]
   },

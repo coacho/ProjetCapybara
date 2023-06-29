@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import eatImage from '../../assets/img/eat.png';
 import sleepImage from '../../assets/img/sleep.png';
 
-import "../../assets/css/sidebar.css";
+import "../../assets/css/sideBar.css";
 
 export default function SideBar() {
     const [currentTime, setCurrentTime] = useState(''); // Déclaration de la variable d'état pour l'heure actuelle
@@ -88,6 +88,7 @@ export default function SideBar() {
                                     {/* <h3>{hours} - {message}</h3> */}
                                     <img className='img-sidebar' src={sleepImage} alt="" />
                                 </div>
+                                
 
                             )
 
