@@ -11,6 +11,7 @@ import { useSelector, useDispatch } from "react-redux";
 
 import TopBar from "../../../components/helped/TopBar";
 import HelpedCalendarMenu from "./HelpedCalendarMenu";
+import ParentCalendrier from "../../../components/helped/CalendrierTablette";
 
 
 export default function HelpedCalendar() {
@@ -26,8 +27,9 @@ export default function HelpedCalendar() {
                     <TopBar title={title} btn={btn}/>
                 </div>
                 <div className='center'>
-                    <HelpedCalendarMenu/>
+                    {/* <HelpedCalendarMenu/> */}
                     <div id="default-calendar-view">
+                        {/* <ParentCalendrier/> */}
                         <Outlet />
                     </div>
                 </div>

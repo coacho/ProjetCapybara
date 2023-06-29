@@ -14,7 +14,7 @@ const Menu = () => {
         <div className="center-container">
             <div className="nav">
                 <div className="nav-item">
-                    <Link to='/helped/calendar/agenda'>
+                    <Link to='/helped/calendar/week'>
                         <img alt="" src={calendrierImg}/>
                     </Link>
                 </div>
