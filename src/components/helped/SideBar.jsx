@@ -40,7 +40,7 @@ export default function SideBar() {
             }
 
 
-            if (hours == 12) {
+            if (hours > 12 && hours < 16) {
                 setMessage("Bientôt l'heure de déjeûner");
             }
             if (hours >= 22 || hours > 0 && hours < 6) {
@@ -57,7 +57,7 @@ export default function SideBar() {
         };
     }, []);
 
-    
+
     return (
         <div className="container-bar">
             <div className="navbar-left">
@@ -77,25 +77,23 @@ export default function SideBar() {
                 <div className="row">
                     <div className="column">
                         <h1>{message}</h1>
-                        {hours == 12 && (
-                            <div>
-                                {/* <h3>{hours} - {message}</h3> */}
-                                <img className='img-sidebar' src={eatImage} alt="" />
-                            </div>
-                        )}
-                        {hours === 21 && (
-                            <div>
-                                {/* <h3>{hours} - {message}</h3> */}
-                                <img className='img-sidebar' src={eatImage} alt="" />
-                            </div>
-                        )}
+                        {
+                            hours > 8 && hours < 16 ? (
+                                <div>
+                                    {/* <h3>{hours} - {message}</h3> */}
+                                    <img className='img-sidebar' src={eatImage} alt="" />
+                                </div>
+                            ) : (
+                                <div>
+                                    {/* <h3>{hours} - {message}</h3> */}
+                                    <img className='img-sidebar' src={sleepImage} alt="" />
+                                </div>
 
-                        {hours && (
-                            <div>
-                                {/* <h3>{hours} - {message}</h3> */}
-                                <img className='img-sidebar' src={sleepImage} alt="" />
-                            </div>
-                        )}
+                            )
+
+                        }
+
+
 
                     </div>
                 </div>
