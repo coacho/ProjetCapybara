@@ -1,0 +1,251 @@
+.box {
+  /* background-color: transparent; */
+  /* display: flex;
+  align-items: flex-start;
+  flex-direction: column; */
+  gap: 10px;
+  left: 0;
+  /* position: fixed; */
+  /* top: 0; */
+  width: fit-content;
+  background-color: #515e73cc;
+  height: 735px;
+  min-width: 1000px;
+  position: relative;
+}
+
+.box .column1{
+  display: flex;
+  flex-direction: row;
+} 
+.box .column2{
+  display: flex;
+  flex-direction: row;
+} 
+.box .column3{
+  display: flex;
+  flex-direction: column;
+} 
+
+.box .group-1 {
+  height: 151px;
+  left: 26px;
+  position: absolute;
+  top: 38px;
+  width: 357px;
+}
+
+.box .overlap-group {
+  display: flex;
+  flex-direction: column;
+  height: 151px;
+  position: relative;
+  width: 355px;
+}
+
+.box .text-wrapper {
+  color: #ffffff;
+  font-family: "Inter", Helvetica;
+  font-size: 24px;
+  font-weight: 400;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 0;
+  width: 53px;
+}
+
+.box .rectangle-1 {
+  background-color: #ffffff;
+  border-radius: 12px;
+  height: 122px;
+  left: 0;
+  position: absolute;
+  top: 29px;
+  width: 355px;
+}
+
+.box .group-2 {
+  height: 68px;
+  left: 26px;
+  position: absolute;
+  top: 299px;
+  width: 357px;
+}
+
+.box .text-wrapper-2 {
+  color: #ffffff;
+  font-family: "Inter", Helvetica;
+  font-size: 24px;
+  font-weight: 400;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 0;
+}
+
+.box .rectangle-2 {
+  background-color: #ffffff;
+  border-radius: 12px;
+  height: 39px;
+  left: 0;
+  position: absolute;
+  top: 29px;
+  width: 355px;
+}
+
+.box .group-3 {
+  height: 180px;
+  left: 26px;
+  position: absolute;
+  top: 532px;
+  width: 756px;
+}
+
+.box .text-wrapper-3 {
+  color: #ffffff;
+  font-family: "Inter", Helvetica;
+  font-size: 24px;
+  font-weight: 400;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 0;
+  width: 139px;
+}
+
+.box .rectangle-3 {
+  background-color: #ffffff;
+  border-radius: 12px;
+  height: 151px;
+  left: 0;
+  position: absolute;
+  top: 29px;
+  width: 754px;
+}
+
+.box .group-4 {
+  height: 68px;
+  left: 26px;
+  position: absolute;
+  top: 210px;
+  width: 357px;
+}
+
+.box .group-5 {
+  height: 68px;
+  left: 425px;
+  position: absolute;
+  top: 39px;
+  width: 359px;
+}
+
+.box .text-wrapper-4 {
+  color: #ffffff;
+  font-family: "Inter", Helvetica;
+  font-size: 24px;
+  font-weight: 400;
+  left: 182px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 0;
+}
+
+.box .rectangle-4 {
+  background-color: #ffffff;
+  border-radius: 12px;
+  height: 39px;
+  left: 0;
+  position: absolute;
+  top: 29px;
+  width: 173px;
+}
+
+.box .rectangle-5 {
+  background-color: #ffffff;
+  border-radius: 12px;
+  height: 39px;
+  left: 182px;
+  position: absolute;
+  top: 29px;
+  width: 173px;
+}
+
+.box .img {
+  height: 87px;
+  left: 796px;
+  position: absolute;
+  top: 633px;
+  width: 185px;
+}
+
+.box .overlap-wrapper {
+  background-color: #add1e5;
+  border-radius: 12px;
+  height: 119px;
+  left: 26px;
+  position: absolute;
+  top: 390px;
+  transform: rotate(180deg);
+  width: 115px;
+}
+
+.box .overlap {
+  height: 115px;
+  position: relative;
+  top: 1px;
+  width: 116px;
+}
+
+.box .line {
+  height: 115px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: rotate(-180deg);
+  width: 116px;
+}
+
+.box .line-2 {
+  height: 115px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  transform: rotate(-180deg);
+  width: 116px;
+}
+
+.box .overlap-group-wrapper {
+  background-color: #add1e5;
+  border-radius: 12px;
+  height: 119px;
+  left: 181px;
+  position: absolute;
+  top: 392px;
+  transform: rotate(180deg);
+  width: 115px;
+}
+
+.box .div-wrapper {
+  background-color: #add1e5;
+  border-radius: 12px;
+  height: 119px;
+  left: 337px;
+  position: absolute;
+  top: 388px;
+  transform: rotate(180deg);
+  width: 115px;
+}
+
+.box .group-6 {
+  height: 68px;
+  left: 429px;
+  position: absolute;
+  top: 210px;
+  width: 357px;
+}
