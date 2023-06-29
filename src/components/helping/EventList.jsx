@@ -1,6 +1,7 @@
-import EventItem from "./eventItem";
+import EventItem from "./EventItem";
 
 const EventList = () => {
+
     const events = [
         {
           id: 1,

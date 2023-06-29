@@ -61,8 +61,6 @@ const NotesList = (props) => {
     const startIndex = currentPage * displayCount;
     const displayedNotes = notes.slice(startIndex, startIndex + displayCount);
 
-
-
     return (
         <>
             <div className="container-noteList">
@@ -73,7 +71,6 @@ const NotesList = (props) => {
                         </Link>
                     ))
                 }
-
             </div>
             <div className="scrolle">
                 <button

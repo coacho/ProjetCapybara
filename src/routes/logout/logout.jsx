@@ -8,7 +8,7 @@ import {
 } from "react-router-dom";
 
 import { useSelector, useDispatch } from "react-redux";
-import { get, login, logout } from "../../slices/userAuth/userAuthSlice";
+import { login, logout } from "../../slices/userAuth/userAuthSlice";
 
 
 export default function Logout() {
@@ -18,7 +18,7 @@ export default function Logout() {
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
-    useEffect( () => {
+    useEffect(() => {
 
         async function logoutUser() {
 
@@ -34,17 +34,16 @@ export default function Logout() {
             <h2>Déconnexion</h2>
             {
                 userAuth.authenticated ? (
-                    
+
                     <p>Déconnexion...</p>
 
-                )  : (
+                ) : (
 
                     <p>Aucun utilisateur n'est connecté</p>
-                    
+
                 )
-            
             }
-            
+
         </>
     )
 }

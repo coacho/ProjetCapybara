@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 
 import { useSelector, useDispatch } from "react-redux";
-import { get, login, logout } from "../../slices/userAuth/userAuthSlice";
+import { login, logout } from "../../slices/userAuth/userAuthSlice";
 
 import loginController from "../../controller/login/loginController";
 
@@ -23,11 +23,11 @@ export default function Login() {
 
     useEffect(() => {
 
-        if(userAuth.authenticated) {
+        if (userAuth.authenticated) {
 
-            console.log("Storing in userAuth store : ", userAuth);
+            console.log("Stored in userAuth store : ", userAuth);
 
-            
+
         } else {
 
             console.log("No user stored in userAuth store.");
@@ -37,15 +37,15 @@ export default function Login() {
 
 
     // Variables locales du composant
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+    const [userId, setUserId] = useState('');
+    const [userPassword, setUserPassword] = useState('');
 
     const handleEmailChange = (event) => {
-        setEmail(event.target.value);
+        setUserId(event.target.value);
     };
 
     const handlePasswordChange = (event) => {
-        setPassword(event.target.value);
+        setUserPassword(event.target.value);
     };
 
     const handleSubmit = async (event) => {
@@ -53,28 +53,33 @@ export default function Login() {
 
 
         console.log('--- CONNEXION ---');
-        console.log(email, password);
+        console.log(userId, userPassword);
 
         const formData = {
-            email,
-            password,
+            userId,
+            userPassword,
         };
 
         try {
             const user = await loginController.authenticateUser(formData);
-            
-            
+
+            console.log('before dispatch');
+
+            console.log(user);
             await dispatch(login({
                 userId: user.userId,
                 userLabels: user.userLabels,
+                userNodeId: user.userNodeId,
+                instance: user.instance,
             })); // L'état de l'authentification est contrôlé par le composant HelpingRoot
-            
-            setEmail('');
-            setPassword('');
-            
+            console.log('after dispatch');
+
+            setUserId('');
+            setUserPassword('');
+
 
         }
-        catch(err) {
+        catch (err) {
             console.log(err);
         }
 
@@ -85,7 +90,7 @@ export default function Login() {
             <h2>Connexion</h2>
             {
                 !userAuth.authenticated ? (
-                    
+
                     <form onSubmit={handleSubmit}>
                         <div>
                             <label htmlFor="email">
@@ -95,7 +100,7 @@ export default function Login() {
                                 type="text"
                                 name="email"
                                 id="email"
-                                value={email}
+                                value={userId}
                                 onChange={handleEmailChange}
                                 required
                             />
@@ -106,7 +111,7 @@ export default function Login() {
                                 type="password"
                                 name="password"
                                 id="password"
-                                value={password}
+                                value={userPassword}
                                 onChange={handlePasswordChange}
                                 required
                             />
@@ -114,15 +119,14 @@ export default function Login() {
                         <button type="submit">Se connecter</button>
                     </form>
 
-                )  : (
+                ) : (
 
                     <p>Vous êtes connecté.</p>
-                    
+
                 )
-            
+
             }
-            
-            {/* </Form> */}
+
         </>
     )
 }

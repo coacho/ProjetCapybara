@@ -5,7 +5,6 @@ import {
     Form,
     useNavigate,
 } from "react-router-dom";
-// import { getContacts, createContact } from "../contacts";
 
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
@@ -20,30 +19,30 @@ export default function HelpedRoot() {
     const navigate = useNavigate();
 
     //! DEBUT : Commenter pour ne pas avoir à se connecter lors des tests
-    // useEffect(() => {
+    useEffect(() => {
         
-    //     if (userAuth.authenticated) 
-    //     {
-    //         console.log(`${userAuth.userId} est connecté`);
-    //         if (userAuth.userLabels.includes('HelpedPerson'))
-    //         {
-    //             navigate('/helped/home');
-    //         }
-    //         else {
-    //             navigate('/helping/home');
-    //         }
-    //     } 
-    //     else {
-    //         console.log(`Aucun utilisateur n'est connecté`);
-    //         navigate('/login');
-    //     }
+        if (userAuth.authenticated) 
+        {
+            console.log(`${userAuth.userId} est connecté`);
+            if (userAuth.userLabels.includes('HelpedPerson'))
+            {
+                navigate('/helped/home');
+            }
+            else {
+                navigate('/helping/home');
+            }
+        } 
+        else {
+            console.log(`Aucun utilisateur n'est connecté`);
+            navigate('/login');
+        }
 
-    // }, []) 
+    }, []) 
     //! FIN : Commenter pour ne pas avoir à se connecter lors des tests
 
     return (
         //! DEBUT : Commenter pour ne pas avoir à se connecter lors des tests
-        // userAuth.authenticated && 
+        userAuth.authenticated && 
         //! FIN : Commenter pour ne pas avoir à se connecter lors des tests
             <div className="container">
                 <div className="home">

@@ -5,27 +5,29 @@ export const userAuthSlice = createSlice({
   initialState: {
     authenticated: false,
     userId: '',
-    userLabels: []
+    userLabels: [],
+    userNodeId: null,
+    instance: null
   },
   reducers: {
-    get: (state) => {
-        return state;
-    },
     login: (state, action) => {
-        state.userId = action.payload.userId;
-        state.userLabels = action.payload.userLabels; 
-        
-        state.authenticated = true;
+      state.authenticated = true;
+      state.userId = action.payload.userId;
+      state.userLabels = action.payload.userLabels;
+      state.userNodeId = action.payload.userNodeId;
+      state.instance = action.payload.instance;
     },
     logout: (state) => {
-        state.userId = '';
-        state.userLabels = [];
-        state.authenticated = false;
+      state.authenticated = false;
+      state.userId = '';
+      state.userLabels = [];
+      state.userNodeId = null;
+      state.instance = null;
     }
   },
 })
 
 // Action creators are generated for each case reducer function
-export const { get, login, logout } = userAuthSlice.actions
+export const { login, logout } = userAuthSlice.actions
 
 export default userAuthSlice.reducer

@@ -2,6 +2,7 @@ import React from 'react';
 import ContactsListItem from './ContactListItem';
 
 const ContactList = () => {
+  
   const contacts = [
     {
       id: 1,

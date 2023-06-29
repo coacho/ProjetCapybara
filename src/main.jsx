@@ -11,25 +11,17 @@ import './helping-index.css';
 
 // Redux Store
 import store from './store';
-import {Provider} from "react-redux";
+import { Provider } from "react-redux";
 
 // Routes
-import Root, {
-  // loader as rootLoader,
-  // action as rootAction,
-} from './routes/root';
+import Root from './routes/root';
 
-import Login, {
-  // action as loginAction
-} from './routes/login/Login';
-import Logout , {
-  // loader as logoutLoader,
-}from './routes/logout/Logout';
+import Login from './routes/login/login';
+import Logout from './routes/logout/logout';
+
 
 // Aidé
-import HelpedRoot, {
-  // loader as helpedRootLoader,
-} from './routes/HelpedPerson/HelpedRoot';
+import HelpedRoot from './routes/HelpedPerson/HelpedRoot';
 import HelpedHome from './routes/HelpedPerson/home/HelpedHome';
 
 import HelpedContacts from './routes/HelpedPerson/contacts/HelpedContacts';
@@ -70,15 +62,13 @@ const router = createBrowserRouter([
     path: "/",
     element: <Root />,
     errorElement: <ErrorPage />,
-    // loader: rootLoader,
-    // action: rootAction,
     children: [
       {
-        path:"/login",
+        path: "/login",
         element: <Login />,
       },
       {
-        path:"/logout",
+        path: "/logout",
         element: <Logout />
       },
     ]
@@ -86,44 +76,44 @@ const router = createBrowserRouter([
   {
     path: "/helped/",
     element: <HelpedRoot />,
-    // loader: helpedRootLoader,
     children: [
       {
-        path:"/helped/home",
+        path: "/helped/home",
         element: <HelpedHome />
       },
       {
-        path:"/helped/calendar",
+        path: "/helped/calendar",
         element: <HelpedCalendar />,
         children: [
           {
             path: "/helped/calendar/week",
-            element: <HelpedCalendarWeek/>
+            element: <HelpedCalendarWeek />
           },
           {
-            path:"/helped/calendar/agenda",
-            element: <HelpedCalendarAgenda/>
+            path: "/helped/calendar/agenda",
+            element: <HelpedCalendarAgenda />
           }
         ]
       },
       {
-        path:"/helped/contacts",
+        path: "/helped/contacts",
+        // loader: contactsLoader,
         element: <HelpedContacts />,
       },
       {
-        path:"/helped/contacts/details/:contactId",
+        path: "/helped/contacts/details/:contactId",
         element: <HelpedContact />,
       },
       {
-        path:"/helped/notes",
+        path: "/helped/notes",
         element: <HelpedNotes />,
       },
       {
-        path:"/helped/notes/details/:noteId",
+        path: "/helped/notes/details/:noteId",
         element: <HelpedNote />,
       },
       {
-        path:"/helped/settings",
+        path: "/helped/settings",
         element: <HelpedSettings />,
       },
 
@@ -132,45 +122,45 @@ const router = createBrowserRouter([
   {
     path: "/helping/",
     element: <HelpingRoot />,
-    children : [
+    children: [
       {
-        path:"/helping/home",
-        element: <HelpingHome/>
+        path: "/helping/home",
+        element: <HelpingHome />
       },
       {
-        path:"/helping/calendar",
+        path: "/helping/calendar",
         element: <HelpingCalendar />
       },
       {
-        path:"/helping/calendar/list",
+        path: "/helping/calendar/list",
         element: <HelpingCalendarListEvents />
       },
       {
-        path:"/helping/calendar/add",
+        path: "/helping/calendar/add",
         element: <HelpingCalendarAddEvent />
       },
       {
-        path:"/helping/contacts",
+        path: "/helping/contacts",
         element: <HelpingContacts />
       },
       {
-        path:"/helping/contacts/list",
+        path: "/helping/contacts/list",
         element: <HelpingContactsListContacts />
       },
       {
-        path:"/helping/contacts/add",
+        path: "/helping/contacts/add",
         element: <HelpingContactsAddContact />
       },
       {
-        path:"/helping/contacts/invite",
+        path: "/helping/contacts/invite",
         element: <HelpingContactsInvite />
       },
       {
-        path:"/helping/reminders",
+        path: "/helping/reminders",
         element: <HelpingReminders />
       },
       {
-        path:"/helping/reminders/param",
+        path: "/helping/reminders/param",
         element: <HelpingRemindersParam />
       },
     ]

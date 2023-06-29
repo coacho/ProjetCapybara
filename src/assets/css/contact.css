@@ -15,6 +15,7 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
+    padding-left: 0;
 
     border-radius: 24px;
     border: 10px solid #77B3D3;
@@ -26,8 +27,33 @@
     gap: 11px;
 }
 
+.contact-img-frame {
+    max-width: 160px;
+    object-fit: contain;
+    border-radius: 18px;
+}
+
 .contact-name h1{
     font-size: 1.2rem;
+    margin-bottom: 8px;
+    text-align: left;
+    align-self: flex-start;
+}
+.contact-name h5{
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: 8px;
+    padding: 0;
+    text-align: left;
+    align-self: flex-start;
+}
+
+.contact-name p{
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    font-size: 1rem;
+    align-self: flex-start;
 }
 
 .container-contactDetails{
@@ -50,6 +76,7 @@
     height: 298px;
     object-fit: cover;
 }
+
 
 
 .container-contactList a{
@@ -108,9 +135,31 @@
     padding: 20px;
     color: #FFF;
     font-size: 24px;
-    font-family: Inter;
+    font-family: "Quicksand", "Inter", sans-serif;
 }
 
 .container-contactDetails a{
     text-decoration: none;
+}
+
+.contact-details-name {
+    font-family: 'Quicksand', 'Inter', sans-serif;
+}
+.contact-details-name h1 {
+    font-size: 2.2rem;
+    margin-top: 0;
+    font-weight: 800;
+}
+.contact-details-name h5 {
+    font-size: 1.4rem;
+    margin-top: 0;
+    font-weight: 600;
+    
+}
+.contact-details-name p{
+    font-size: 1.3rem;
+    margin-top: 0;
+    font-weight: 600;
+    color: #444;
+
 }

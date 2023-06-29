@@ -5,15 +5,15 @@ import reactRefresh from "@vitejs/plugin-react-refresh";
 
 export default ({mode}) => {
 
-  // process.env = {...process.env, ...loadEnv(mode, process.cwd())};
+  process.env = {...process.env, ...loadEnv(mode, process.cwd())};
   
   return defineConfig({
       server: {
         host: true,
-        // https: {
-        //   key: fs.readFileSync(process.env.VITE_APP_SSL_KEY_PATH),
-        //   cert: fs.readFileSync(process.env.VITE_APP_SSL_CERT_PATH),
-        // }
+        https: {
+          key: fs.readFileSync(process.env.VITE_APP_SSL_KEY_PATH),
+          cert: fs.readFileSync(process.env.VITE_APP_SSL_CERT_PATH),
+        }
       },
       plugins: [
         react(),

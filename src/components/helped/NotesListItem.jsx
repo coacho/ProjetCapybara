@@ -25,9 +25,6 @@ const NotesListItem = (props) => {
                 <div className='note-title'>
                     <h3>"{note.content}"</h3>
                 </div>
-                {/* <div className='note-content'>
-                    <h3>"{note.content}"</h3>
-                </div> */}
             </div>
         </div> 
      );

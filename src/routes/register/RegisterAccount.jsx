@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 
 import { useSelector, useDispatch } from "react-redux";
-// import { get, login, logout } from "../../slices/userAuth/userAuthSlice";
+// import { login, logout } from "../../slices/userAuth/userAuthSlice";
 
 import registerController from "../../controller/register/registerController";
 

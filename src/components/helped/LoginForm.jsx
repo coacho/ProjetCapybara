@@ -1,9 +1,11 @@
 const LoginForm = () => {
+
+
     //requête de connexion
     const handleSubmit = () => {
-        
+
     }
-    return ( 
+    return (
         <div class="form-container">
             <form onSubmit={handleSubmit}>
                 <div >
@@ -19,7 +21,7 @@ const LoginForm = () => {
                 </div>
             </form>
         </div>
-     );
+    );
 }
- 
+
 export default LoginForm;

@@ -1,8 +1,9 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import eatImage from '../../assets/img/eat.png'
+import eatImage from '../../assets/img/eat.png';
+import sleepImage from '../../assets/img/sleep.png';
 
-import '../../assets/css/sidebar.css';
+import "../../assets/css/sidebar.css";
 
 export default function SideBar() {
     const [currentTime, setCurrentTime] = useState(''); // Déclaration de la variable d'état pour l'heure actuelle
@@ -10,6 +11,7 @@ export default function SideBar() {
     const [dayOrNight, setDayOrNight] = useState('');
     const [message, setMessage] = useState('');
     const [hours, setHours] = useState('');
+    const [clockStyle, setClockStyle] = useState('');
 
     useEffect(() => {
         const updateDateTime = () => {
@@ -31,13 +33,18 @@ export default function SideBar() {
 
             if (hours >= 6 && hours < 18) {
                 setDayOrNight('Jour');
+                setClockStyle('dayClockStyle');
             } else {
                 setDayOrNight('Nuit');
+                setClockStyle('nightClockStyle');
             }
 
 
             if (hours == 12) {
                 setMessage("Bientôt l'heure de déjeûner");
+            }
+            if (hours >= 22 || hours > 0 && hours < 6) {
+                setMessage("Il est l'heure de dormir");
             }
         };
 
@@ -63,7 +70,7 @@ export default function SideBar() {
                     <div className="column day">
                         <h1>{currentDate}</h1>
                     </div>
-                    <div className="column day-night">
+                    <div className={`column day-night ${clockStyle}`}>
                         <h1>{dayOrNight}</h1>
                     </div>
                 </div>
@@ -72,23 +79,23 @@ export default function SideBar() {
                         <h1>{message}</h1>
                         {hours == 12 && (
                             <div>
-                                <h3>{hours} - déjeûner</h3>
-                                <img className='img-eat' src={eatImage} alt="" />
+                                {/* <h3>{hours} - {message}</h3> */}
+                                <img className='img-sidebar' src={eatImage} alt="" />
                             </div>
                         )}
                         {hours === 21 && (
                             <div>
-                                <h3>{hours} - dîner</h3>
-                                <img className='img-eat' src={eatImage} alt="" />
+                                {/* <h3>{hours} - {message}</h3> */}
+                                <img className='img-sidebar' src={eatImage} alt="" />
                             </div>
                         )}
 
-                        {/* {hours && (
+                        {hours && (
                             <div>
-                                <h3>{hours} - dîner</h3>
-                                <img className='img-eat' src={eatImage} alt="" />
+                                {/* <h3>{hours} - {message}</h3> */}
+                                <img className='img-sidebar' src={sleepImage} alt="" />
                             </div>
-                        )} */}
+                        )}
 
                     </div>
                 </div>

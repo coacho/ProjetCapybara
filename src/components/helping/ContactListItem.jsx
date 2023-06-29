@@ -2,6 +2,7 @@
 
 import img from '../../assets/img/pierre-dupont.jpg';
 import '../../assets/css-helping/contact-helping.css';
+
 const ContactListItem = (props) => {
 
     const {contact} = props;

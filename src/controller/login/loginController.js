@@ -1,8 +1,8 @@
+const API_SERVER_URI = import.meta.env.VITE_APP_API_SERVER_URI; 
+
 const authenticateUser = async function (formData) {
     try {
             
-        // console.log();
-        const API_SERVER_URI = import.meta.env.VITE_APP_API_SERVER_URI; 
         const response = await fetch(API_SERVER_URI +'/authenticateUser', {
             method: "POST",
             headers: {
@@ -13,24 +13,14 @@ const authenticateUser = async function (formData) {
         const user = await response.json();
 
         if (response.ok) {
-            // console.log("Connexion réussie ???", response);
-            // console.log("Utilisateur connecté : ", user);
-            // console.log("properties", user.properties);
-            // console.log("nom-prénom de l'utilisateur connecté : ",
-            //     user.properties.firstName + ' ' + user.properties.lastName
-            // );
+
+            console.log("Utilisateur connecté : ", user);
             
-            // let userLabels = user.labels;
-            // console.log(
-            //     "label de l'utilisateur connecté : ",
-            //     userLabels
-            // );
-            // console.log("nom-prénom de l'utilisateur connecté : ",
-            //     user.properties.firstName + ' ' + user.properties.lastName
-            // );
             return {
                 userId: user.properties.userId,
                 userLabels : user.labels,
+                userNodeId : user.nodeId,
+                instance: user.instance,
             };
 
         } else {

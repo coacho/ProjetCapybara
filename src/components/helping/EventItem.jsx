@@ -1,5 +1,6 @@
 import img from '../../assets/img/pierre-dupont.jpg';
 import '../../assets/css-helping/event.css';
+
 const EventItem = (props) => {
 
     const {event} = props;
