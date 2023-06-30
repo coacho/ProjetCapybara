@@ -1,3 +1,5 @@
+import avatarController from "../../avatar/avatarController";
+
 const API_SERVER_URI = import.meta.env.VITE_APP_API_SERVER_URI;
 
 async function getContact(requestedUserNodeId, userId) {
@@ -42,9 +44,10 @@ async function updateContact(userAuth) {
     }
 }
 
-async function addContact(formData, instanceID) {
+async function addContact(formData, instanceID, newAvatarFile) {
 
     try {
+        
         const response = await fetch(API_SERVER_URI + '/createPerson', {
             method: "POST",
             headers: {
@@ -52,14 +55,15 @@ async function addContact(formData, instanceID) {
             },
             body: JSON.stringify({ formData, instanceID }),
         });
-        const contact = await response.json();
+        const newContact = await response.json();
 
         if (response.ok) {
 
-            console.log('saved new contact', contact);
-            await saveUserAvatar(contact.nodeId, contact.avatarFile);
+            console.log('saved new contact', newContact);
 
-            return contact;
+            const avatarResponseText = await avatarController.saveUserAvatar(newContact.nodeId, newAvatarFile);
+
+            return { newContact, avatarResponseText };
         }
     }
     catch (err) {

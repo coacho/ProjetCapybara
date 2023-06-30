@@ -21,6 +21,7 @@ export default function HelpedContacts() {
     const [contacts, setContacts] = useState([]);
 
     useEffect(() => {
+        console.log(userAuth);
         contactsController.getAllContacts(userAuth.userId, userAuth.instance.instanceID)
             .then(contactsData => {
                 setContacts(contactsData)

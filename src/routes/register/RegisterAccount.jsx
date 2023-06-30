@@ -86,7 +86,6 @@ export default function RegisterAccount() {
 
         console.log("--- CREATION D'UN COMPTE ---", formData, newAvatarFile);
 
-        // let newUser;
 
         try {
 

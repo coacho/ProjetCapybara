@@ -18,6 +18,8 @@ export default function HelpedRoot() {
     const userAuth = useSelector((state) => state.userAuth);
     const navigate = useNavigate();
 
+    console.log(userAuth);
+
     //! DEBUT : Commenter pour ne pas avoir à se connecter lors des tests
     useEffect(() => {
         
